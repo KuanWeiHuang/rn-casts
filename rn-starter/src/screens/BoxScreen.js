@@ -1,45 +1,43 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
 const BoxScreen = () => {
-  return (
-    <View style={styles.parentStyle}>
-      <View style={styles.viewOneStyle} />
-      <View style={styles.viewTwoParent}>
-        <View style={styles.viewTwoStyle} />
-      </View>
-      <View style={styles.viewThreeStyle} />
-    </View>
-  );
+    return (
+        <View style = {styles.viewStyle}>
+            <View style = {styles.elementOneStyle }/>
+            <View style = {styles.elementTwoStyle }/>
+            <View style = {styles.elementThreeStyle }/>
+
+        </View>
+
+    ); 
 };
 
 const styles = StyleSheet.create({
-  parentStyle: {
-    borderWidth: 3,
-    borderColor: 'black',
-    height: 200,
-    flexDirection: 'row',
-    justifyContent: 'space-between'
-  },
-  viewOneStyle: {
-    height: 50,
-    width: 50,
-    backgroundColor: 'red'
-  },
-  viewTwoStyle: {
-    height: 50,
-    width: 50,
-    backgroundColor: 'green'
-  },
-  viewTwoParent: {
-    height: 100,
-    justifyContent: 'flex-end'
-  },
-  viewThreeStyle: {
-    height: 50,
-    width: 50,
-    backgroundColor: 'purple'
-  }
+    viewStyle: {
+        borderWidth: 3,
+        borderColor: 'black',
+        height: 200,
+        flexDirection: 'row',
+        justifyContent: 'space-between'
+    },
+    elementOneStyle: {
+        height: 50,
+        width: 50,
+        backgroundColor: 'red'
+    },
+    elementTwoStyle: {
+        height: 50,
+        width: 50,
+        backgroundColor: 'green',
+        top: 50
+    },
+    elementThreeStyle: {
+        height: 50,
+        width: 50,
+        backgroundColor: 'purple'
+    }
+
 });
 
 export default BoxScreen;
